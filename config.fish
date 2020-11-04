@@ -22,6 +22,13 @@ set -x EDITOR nvim
 # load starship prompt
 starship init fish | source
 
+#mkdir $ cd that dir
+
+function mkdir-cd
+    mkdir $argv && cd $argv
+end
+
+
 # alias for nvim
 alias vim='nvim'
 
@@ -73,6 +80,9 @@ alias e='exit'
 #alias for clear
 alias c='clear'
 
+#alias for copy
+alias cp='cp -r -g'
+
 # alias for my create-rect-app
 
 alias react='npx create-react-app --template typescript'
@@ -94,7 +104,7 @@ alias shutdown='sudo shutdown'
 # alias for advanced copy and move
 #alias cp='advcp -g'
 #alias mv='advmv -g'
-alias cp='rsync --info=progress2 '
+#alias cp='rsync --info=progress2 '
 
 # alias pacman and yay
 
